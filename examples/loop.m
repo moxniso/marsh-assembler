@@ -1,0 +1,12 @@
+Infinite W loop
+10/23/2020 moxniso
+
+$START
+DUMP
+MOVI S, 40
+LAB FUN:
+	MOVC X, W
+	SYSCALL
+	MOVC X, ~
+	SYSCALL
+	JMP FUN
