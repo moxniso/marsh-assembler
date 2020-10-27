@@ -11,7 +11,7 @@ https://github.com/moxniso/marsh-interpreter
 
 # What platform is this for?
 
-Anything that compiles C.
+Anything that compiles C (specifically GNU99)
 
 # Where's the documentation?
 
