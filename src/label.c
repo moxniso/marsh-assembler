@@ -19,9 +19,7 @@ short replaceLabels(vector* ldatabase, char* sourceBuffer, char* ROM, long* ROMc
          (*ROMcounter)++;
 	 
 	 short llen = lnew->len;
-	 free(lnew->name);
 	 lnew = NULL;
-	 free(lnew);
 	 return llen;
      }
    }
@@ -31,7 +29,6 @@ short replaceLabels(vector* ldatabase, char* sourceBuffer, char* ROM, long* ROMc
 
    lnew = NULL;
    free(lundef);
-   free(lnew->name);
    free(lnew);
    return 0;
 }
