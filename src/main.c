@@ -55,14 +55,15 @@ int main(int argc, char** argv)
 	
 		char ROM[MAX_ROMSIZE];	
 		char* output = main_assembler(sourceBuffer, sourceSize, ROM);
-		if (!output) {
-			printf("Failed to assemble\n");
-			vector_free(ldatabase);
-			return 1;
-		}
-		outputROM(output, outname);
 		free(sourceBuffer);
 		vector_free(ldatabase);
+
+		if (!output) {
+			printf("Failed to assemble\n");
+			return 1;
+		}
+
+		outputROM(output, outname);
 		free(outname);
 		return 0;
 	}
